@@ -1,0 +1,28 @@
+var db;
+ var config = {
+            apiKey: "AIzaSyAOp_aziE2j8D05bMA1dQ8rM_cOVBMPQ8Q",
+            authDomain: "vehicleprice-9bdc5.firebaseapp.com",
+            projectId: "vehicleprice-9bdc5"
+        };
+        var app = firebase.initializeApp(config);
+        db = firebase.firestore(app);
+
+
+function storeData(){
+
+    db.collection("cities").doc("LA").set({
+    name: "Los Angeles",
+    state: "CA",
+    country: "USA"
+})
+.then(() => {
+    console.log("Document successfully written!");
+})
+.catch((error) => {
+    console.error("Error writing document: ", error);
+});
+}
+
+
+<input type="text" id="dataOne">
+        <button id ="addData"  onclick="storeData()">Save Data</button>
