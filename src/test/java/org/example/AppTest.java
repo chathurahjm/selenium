@@ -40,7 +40,7 @@ public class AppTest extends base
 
             String[] yearList = {"2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021"};
             for (String year : yearList) {
-                OpenChrom();
+                OpenChromeHeadLess();
 
 
                 for (int i = 1; i < 8; i++) {
@@ -121,7 +121,7 @@ public class AppTest extends base
 
             String[] yearList = {"2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013","2014", "2015", "2016", "2017", "2018", "2019", "2020", "2021"};
             for (String year : yearList) {
-                OpenChrom();
+                OpenChromeHeadLess();
 
 
                 for (int i = 1; i < 8; i++) {
@@ -219,7 +219,7 @@ public class AppTest extends base
 
 
     public void updateDB(String collection,String document,String Avg,String Min,String Max,String Total,String Update ) throws InterruptedException {
-        OpenChrom();
+        OpenChromeHeadLess();
         driver.get("https://vehicleprice-9bdc5.web.app/");
         Thread.sleep(6000);
         driver.findElement(By.id("collection")).clear();
